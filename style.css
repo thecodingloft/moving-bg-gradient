@@ -1,0 +1,84 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* CSS RESET */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+margin: 0;
+padding: 0;
+font-weight: normal;
+}
+
+ol, ul {
+list-style: none;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+/* STYLES */
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background: #e2e2e2;
+}
+
+.hero {
+    background: #f1f1f1;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__bg {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgb(0,4,60);
+    background: linear-gradient(120deg, rgba(0,4,60,1) 0%, rgba(0,212,255,1) 100%); 
+    z-index: 0;
+    animation: moveBg 2s linear alternate infinite;
+}
+
+.hero__text  {
+    z-index: 100;
+    color: #f1f1f1;
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero h3 {
+    font-size: 32px;
+}
+
+@keyframes moveBg {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(500px);
+    }
+}
